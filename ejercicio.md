@@ -198,3 +198,13 @@ SELECT * FROM "owner";
 **Resultado:**
 
 ![resultado punto 2](img/showOwners.png)
+
+3. Mostrar todos los registros de la tabla `huespedes`.
+
+```sql
+SELECT * FROM client;
+```
+
+**Resultado:**
+
+![resultado punto 3](img/showClients.png)
