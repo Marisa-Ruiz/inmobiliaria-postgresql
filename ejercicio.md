@@ -3,6 +3,7 @@ Queries SQL - plataforma de alquiler
 NIVEL I
 
 Parte 1. CREATE
+
 0. Crea las tablas de tu modelo de datos
 
 CREATE TABLE "owner" (
@@ -186,3 +187,14 @@ INSERT INTO images (property_id, room_id, review_id, chat_id, "name", "path", "t
 (NULL, 1, NULL, NULL, 'habitacion_norte', '/img/room1_norte.jpg', 'jpg', 153600),
 (NULL, NULL, 1, NULL, 'foto_review_casa', '/img/review1_casa.jpg', 'jpg', 102400),
 (NULL, NULL, NULL, 3, 'captura_contrato', '/img/chat3_contrato.png', 'png', 51200);
+
+Parte 2. READ
+
+2. Mostrar todos los registros de la tabla `anfitriones`.
+
+```sql
+SELECT * FROM "owner";
+```
+**Resultado:**
+
+![resultado punto 2](img/showOwners.png)
