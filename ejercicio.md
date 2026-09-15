@@ -208,3 +208,13 @@ SELECT * FROM client;
 **Resultado:**
 
 ![resultado punto 3](img/showClients.png)
+
+4. Mostrar todos los registros de la tabla `habitaciones`.
+
+```sql
+SELECT * FROM room;
+```
+
+**Resultado:**
+
+![resultado punto 4](img/showRooms.png)
