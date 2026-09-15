@@ -218,3 +218,13 @@ SELECT * FROM room;
 **Resultado:**
 
 ![resultado punto 4](img/showRooms.png)
+
+5. Mostrar todos los registros de la tabla `reservas`.
+
+```sql
+SELECT * FROM reservation;
+```
+
+**Resultado:**
+
+![resultado punto 5](img/showReservations.png)
