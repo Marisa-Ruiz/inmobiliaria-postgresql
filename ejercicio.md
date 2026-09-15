@@ -240,6 +240,15 @@ SELECT * FROM payment;
 ![resultado punto 6](img/showPayments.png)
 
 7. Mostrar solo el nombre y el email de los anfitriones.
+
+```sql
+SELECT "name", email FROM "owner";
+```
+
+**Resultado:**
+
+![resultado punto 6](img/ownerNameEmail.png)
+
 8. Mostrar solo el título, tipo y ciudad de las habitaciones.
 9. Mostrar el nombre y teléfono de los huéspedes.
 
