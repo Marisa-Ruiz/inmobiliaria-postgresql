@@ -228,3 +228,145 @@ SELECT * FROM reservation;
 **Resultado:**
 
 ![resultado punto 5](img/showReservations.png)
+
+6. Mostrar todos los registros de la tabla `pagos`.
+
+```sql
+SELECT * FROM payment;
+```
+
+**Resultado:**
+
+![resultado punto 6](img/showPayments.png)
+
+7. Mostrar solo el nombre y el email de los anfitriones.
+8. Mostrar solo el título, tipo y ciudad de las habitaciones.
+9. Mostrar el nombre y teléfono de los huéspedes.
+
+Parte 3. UPDATE
+10. Actualizar el teléfono de un anfitrión.
+11. Cambiar el estado de una reserva de `pendiente` a `confirmada`.
+12. Actualizar el precio por noche de una habitación.
+13. Cambiar el costo adicional de un servicio asignado a una habitación.
+14. Actualizar el monto de un pago.
+
+Parte 4. DELETE
+15. Eliminar un servicio asignado a una habitación.
+16. Eliminar una reserva específica.
+17. Intentar eliminar una habitación que tenga reservas o reseñas y explicar qué ocurre y por qué.
+18. Intentar eliminar un anfitrión que tenga habitaciones registradas y explicar qué ocurre y por qué.
+
+NIVEL II
+
+Parte 5. Filtros con WHERE
+19. Mostrar las habitaciones cuyo tipo sea `Privada`.
+20. Mostrar las habitaciones cuyo tipo sea `Compartida`.
+21. Mostrar las reservas cuyo estado sea `pendiente`.
+22. Mostrar las reservas cuyo estado sea `confirmada`.
+23. Mostrar las habitaciones cuyo precio por noche sea mayor a `120000`.
+24. Mostrar las habitaciones publicadas después del `1 de enero de 2024`.
+25. Mostrar los anfitriones cuyo nombre sea `Carlos`.
+
+Parte 6. Búsquedas con LIKE
+26. Mostrar los anfitriones cuyo nombre empiece por `L`.
+27. Mostrar los huéspedes cuyo nombre empiece por `M`.
+28. Mostrar las habitaciones cuyo título contenga `Centro`.
+29. Mostrar los servicios cuyo nombre termine en `Fi`.
+30. Mostrar las habitaciones cuya ciudad contenga la letra `a`.
+
+Parte 7. Ordenamiento
+30. Mostrar las habitaciones ordenadas alfabéticamente por título.
+31. Mostrar las habitaciones ordenadas de mayor a menor precio por noche.
+32. Mostrar las reservas ordenadas por fecha de check-in, de la más próxima a la más lejana.
+33. Mostrar los anfitriones ordenados por nombre descendente.
+
+Parte 8. Rangos y listas
+34. Mostrar las habitaciones con precio por noche entre `80000` y `200000`.
+35. Mostrar las habitaciones cuyo tipo esté entre `Privada` y `Compartida` usando `IN`.
+36. Mostrar las reservas cuyo estado sea `pendiente` o `confirmada`.
+37. Mostrar las habitaciones ubicadas en `Bogotá` o `Medellín`.
+
+NIVEL III
+
+Parte 9. Relaciones con JOIN
+38. Mostrar el título de cada habitación junto con el nombre de su anfitrión.
+39. Mostrar el título, tipo de habitación y nombre del anfitrión.
+40. Mostrar las reservas junto con el nombre del huésped.
+41. Mostrar las reservas junto con el título de la habitación.
+42. Mostrar las reservas con id de reserva, huésped, habitación, fecha check-in, fecha check-out y estado.
+43. Mostrar los pagos junto con el nombre del huésped.
+44. Mostrar los servicios asignados a cada habitación.
+45. Mostrar habitación, servicio, costo_adicional y disponibilidad.
+46. Mostrar todas las habitaciones con su anfitrión y sus reseñas.
+47. Mostrar todas las reservas con huésped, anfitrión y habitación.
+
+Parte 10. Consultas de negocio con JOIN
+48. ¿Qué habitaciones pertenecen al anfitrión `Carlos Ramírez`?
+49. ¿Qué reservas tiene el huésped `Paula Ríos`?
+50. ¿Qué servicios tiene asignados la habitación `Loft Central`?
+51. ¿Qué huésped reservó la habitación `Suite Norte`?
+52. ¿Qué habitaciones tienen al menos una reseña registrada?
+53. ¿Qué habitaciones no tienen reseñas registradas? Sugerencia: usar `LEFT JOIN`.
+54. ¿Qué habitaciones tienen servicios asignados?
+55. ¿Qué habitaciones no tienen servicios asignados?
+
+Parte 11. Funciones de agregación
+56. ¿Cuántos anfitriones hay registrados?
+57. ¿Cuántos huéspedes hay registrados?
+58. ¿Cuántas habitaciones hay publicadas?
+59. ¿Cuántas reservas hay registradas?
+60. ¿Cuál es el precio promedio por noche de las habitaciones?
+61. ¿Cuál es la habitación más costosa por noche?
+62. ¿Cuál es la habitación más económica por noche?
+63. ¿Cuál es la suma total de ingresos registrados en pagos?
+
+Parte 12. GROUP BY
+64. ¿Cuántas habitaciones hay por tipo?
+65. ¿Cuántas habitaciones tiene cada anfitrión?
+66. ¿Cuántas reservas tiene cada huésped?
+67. ¿Cuántas reservas tiene cada habitación?
+68. ¿Cuántos servicios tiene asignados cada habitación?
+69. ¿Cuál es el precio promedio por noche por ciudad?
+
+Parte 13. GROUP BY + HAVING
+70. Mostrar los anfitriones que tengan más de una habitación.
+71. Mostrar los tipos de habitación que tengan más de una publicación.
+72. Mostrar los huéspedes que tengan más de una reserva.
+73. Mostrar las habitaciones que tengan más de un servicio asignado.
+
+NIVEL IV NO OBLIGATORIO
+
+Parte 14. Subconsultas
+74. Mostrar las habitaciones cuyo precio por noche sea mayor al promedio de precios.
+75. Mostrar los pagos cuyo monto sea mayor al monto promedio.
+76. Mostrar las habitaciones que tienen reservas registradas.
+77. Mostrar las habitaciones que no tienen reservas registradas.
+78. Mostrar los anfitriones que tienen al menos una habitación.
+79. Mostrar los huéspedes que tienen reservas confirmadas.
+80. Mostrar el nombre de la habitación o habitaciones que tengan más reservas.
+81. Mostrar la habitación más costosa por noche usando una subconsulta.
+
+Parte 15. LEFT JOIN y análisis de datos faltantes
+82. Mostrar los anfitriones que no tengan habitaciones registradas.
+83. Mostrar las habitaciones que no tengan reservas.
+84. Mostrar las habitaciones que no tengan servicios.
+85. Mostrar los huéspedes que no tengan reservas asignadas.
+86. Mostrar las habitaciones que no tengan reseñas.
+
+Parte 16. Consultas de reto
+87. Mostrar un listado completo con habitación, tipo, anfitrión, huésped de la reserva y servicio asignado.
+88. Mostrar cuántas habitaciones hay por tipo, pero solo los tipos con `2` o más habitaciones.
+89. Mostrar el anfitrión con mayor número de habitaciones.
+90. Mostrar la habitación con mayor número de reservas.
+91. Mostrar los huéspedes ordenados por cantidad de reservas, de mayor a menor.
+92. Mostrar las habitaciones que tienen tanto reservas como servicios.
+93. Mostrar las habitaciones que tienen reservas pero no servicios.
+94. Mostrar los servicios que nunca han sido asignados.
+95. Mostrar el ingreso total por habitación (sumando pagos de sus reservas).
+96. Mostrar la habitación con la reserva de mayor valor pagado.
+
+Parte 17. Preguntas de análisis
+97. ¿Cómo identificarías si una relación `1:1` entre `reservas` y `pagos` está bien implementada?
+98. ¿Qué consulta usarías para demostrar que la relación entre `habitaciones` y `servicios` es muchos a muchos?
+99. ¿Qué diferencia hay entre usar `JOIN` y `LEFT JOIN`?
+100. ¿Cuándo usarías una subconsulta en lugar de un `JOIN`?
