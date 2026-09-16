@@ -132,9 +132,9 @@ INSERT INTO "owner" ("name", surname, email, phone) VALUES
 ('Javier', 'Torres', 'javier.torres@email.com', '645678901');
 
 INSERT INTO city (proximity_university, neihborhood) VALUES
-('Universidad Complutense', 'Moncloa'),
-('Universidad de Sevilla', 'Nervión'),
-('Universidad de Valencia', 'Benimaclet');
+('Universidad de Granada', 'Realejo'),
+('Universidad de Granada', 'Albaicín'),
+('Universidad de Granada', 'Zaidín');
 
 INSERT INTO property (owner_id, city_id, "name", status, description, square_meters, property_type, smokers, pets, gender, cadastre, price, publish_date) VALUES
 (1, 1, 'Piso Centro', 'alquilada', 'Piso luminoso con habitación disponible', 80.00, 'piso', FALSE, TRUE, NULL, 'CAD001', 750.00, '2026-01-05'),
@@ -197,7 +197,7 @@ SELECT * FROM "owner";
 ```
 **Resultado:**
 
-![resultado punto 2](img/showOwners.png)
+![resultado punto 2](img)
 
 3. Mostrar todos los registros de la tabla `huespedes`.
 
@@ -207,7 +207,7 @@ SELECT * FROM client;
 
 **Resultado:**
 
-![resultado punto 3](img/showClients.png)
+![resultado punto 3](img)
 
 4. Mostrar todos los registros de la tabla `habitaciones`.
 
@@ -217,7 +217,7 @@ SELECT * FROM room;
 
 **Resultado:**
 
-![resultado punto 4](img/showRooms.png)
+![resultado punto 4](img)
 
 5. Mostrar todos los registros de la tabla `reservas`.
 
@@ -227,7 +227,7 @@ SELECT * FROM reservation;
 
 **Resultado:**
 
-![resultado punto 5](img/showReservations.png)
+![resultado punto 5](img)
 
 6. Mostrar todos los registros de la tabla `pagos`.
 
@@ -237,7 +237,7 @@ SELECT * FROM payment;
 
 **Resultado:**
 
-![resultado punto 6](img/showPayments.png)
+![resultado punto 6](img)
 
 7. Mostrar solo el nombre y el email de los anfitriones.
 
@@ -247,9 +247,24 @@ SELECT "name", email FROM "owner";
 
 **Resultado:**
 
-![resultado punto 6](img/ownerNameEmail.png)
+![resultado punto 7](img)
 
 8. Mostrar solo el título, tipo y ciudad de las habitaciones.
+
+```sql
+SELECT
+room."name" AS titulo,
+    property.property_type AS tipo,
+    city.neihborhood AS ciudad
+FROM room
+JOIN property ON room.property_id = property.property_id
+JOIN city ON property.city_id = city.city_id;
+```
+
+**Resultado:**
+
+![resultado punto 8](img)
+
 9. Mostrar el nombre y teléfono de los huéspedes.
 
 Parte 3. UPDATE
