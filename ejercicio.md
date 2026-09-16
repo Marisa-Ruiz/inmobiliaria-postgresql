@@ -241,7 +241,7 @@ SELECT * FROM payment;
 
 **Resultado:**
 
-img width="585" height="302" alt="showPayments" src="https://github.com/user-attachments/assets/42d242e4-b4a7-41a8-8083-4fca403797dc" />
+<img width="585" height="302" alt="showPayments" src="https://github.com/user-attachments/assets/42d242e4-b4a7-41a8-8083-4fca403797dc" />
 
 
 7. Mostrar solo el nombre y el email de los anfitriones.
@@ -325,12 +325,15 @@ UPDATE room SET price = 310.00 WHERE room_id = 1;
 13. Cambiar el costo adicional de un servicio asignado a una habitación.
 
 ```sql
-UPDATE facilities SET air_conditioning = TRUE WHERE room_id = 1;
+UPDATE facilities
+SET heating = TRUE
+WHERE room_id = 1;
 ```
 
 **Resultado:**
 
-<img width="1910" height="223" alt="13updateRoomFacilities" src="https://github.com/user-attachments/assets/344c179f-06f5-4436-8b57-58b9c4131f4e" />
+<img width="1906" height="236" alt="13updateRoomHeating" src="https://github.com/user-attachments/assets/96d354fa-0ce1-4b10-ac60-171b4c599a90" />
+
 
 14. Actualizar el monto de un pago.
 
