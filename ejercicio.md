@@ -197,7 +197,8 @@ SELECT * FROM "owner";
 ```
 **Resultado:**
 
-![resultado punto 2](img)
+![resultado punto 2](<img width="1008" height="307" alt="showOwners" src="https://github.com/user-attachments/assets/574ffac6-5881-46e5-91f0-5702c77bde38" />
+)
 
 3. Mostrar todos los registros de la tabla `huespedes`.
 
@@ -207,7 +208,8 @@ SELECT * FROM client;
 
 **Resultado:**
 
-![resultado punto 3](img)
+![resultado punto 3](<img width="1625" height="328" alt="showClients" src="https://github.com/user-attachments/assets/4e3ca447-96ff-4607-a47b-6ae228e15a14" />
+)
 
 4. Mostrar todos los registros de la tabla `habitaciones`.
 
@@ -217,7 +219,8 @@ SELECT * FROM room;
 
 **Resultado:**
 
-![resultado punto 4](img)
+![resultado punto 4](<img width="1162" height="313" alt="showRooms" src="https://github.com/user-attachments/assets/b863070d-6741-464b-8e55-881ccc6737e9" />
+)
 
 5. Mostrar todos los registros de la tabla `reservas`.
 
@@ -227,7 +230,8 @@ SELECT * FROM reservation;
 
 **Resultado:**
 
-![resultado punto 5](img)
+![resultado punto 5](<img width="911" height="312" alt="showReservations" src="https://github.com/user-attachments/assets/f94f917d-fe21-4fdc-9748-9e89251f1070" />
+)
 
 6. Mostrar todos los registros de la tabla `pagos`.
 
@@ -237,7 +241,8 @@ SELECT * FROM payment;
 
 **Resultado:**
 
-![resultado punto 6](img)
+![resultado punto 6](<img width="585" height="302" alt="showPayments" src="https://github.com/user-attachments/assets/42d242e4-b4a7-41a8-8083-4fca403797dc" />
+)
 
 7. Mostrar solo el nombre y el email de los anfitriones.
 
@@ -247,7 +252,8 @@ SELECT "name", email FROM "owner";
 
 **Resultado:**
 
-![resultado punto 7](img)
+![resultado punto 7](<img width="437" height="300" alt="ownerNameEmail" src="https://github.com/user-attachments/assets/5e0ab1cb-28d0-406c-b6d9-4a7c324762ad" />
+)
 
 8. Mostrar solo el título, tipo y ciudad de las habitaciones.
 
@@ -263,9 +269,20 @@ JOIN city ON property.city_id = city.city_id;
 
 **Resultado:**
 
-![resultado punto 8](img)
+![resultado punto 8](<img width="667" height="336" alt="roomsTitleTypeCity" src="https://github.com/user-attachments/assets/93ad50e4-3225-415f-9072-3ca35a862699" />
+)
 
 9. Mostrar el nombre y teléfono de los huéspedes.
+
+```sql
+SELECT "name", phone
+FROM client;
+```
+
+**Resultado:**
+
+![resultado punto 9](<img width="471" height="330" alt="9clientNamePhone" src="https://github.com/user-attachments/assets/ce5bb6f0-f0ae-449b-ad4a-666b48bf6143" />
+)
 
 Parte 3. UPDATE
 10. Actualizar el teléfono de un anfitrión.
