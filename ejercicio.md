@@ -324,7 +324,12 @@ UPDATE room SET price = 310.00 WHERE room_id = 1;
 
 13. Cambiar el costo adicional de un servicio asignado a una habitación.
 
+```sql
+UPDATE facilities SET air_conditioning = TRUE WHERE room_id = 1;```
 
+**Resultado:**
+
+<img width="1910" height="223" alt="13updateRoomFacilities" src="https://github.com/user-attachments/assets/344c179f-06f5-4436-8b57-58b9c4131f4e" />
 
 14. Actualizar el monto de un pago.
 
