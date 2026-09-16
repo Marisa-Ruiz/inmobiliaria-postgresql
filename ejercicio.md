@@ -288,6 +288,13 @@ Parte 3. UPDATE
 
 10. Actualizar el teléfono de un anfitrión.
 
+```sql
+UPDATE "owner" SET phone = '699888777' WHERE owner_id = 1;
+```
+
+**Resultado:**
+
+<img width="937" height="112" alt="updateOwnerPhone" src="https://github.com/user-attachments/assets/7e5db991-eec8-4ca2-a036-1a3fde016c05" />
 
 
 11. Cambiar el estado de una reserva de `pendiente` a `confirmada`.
