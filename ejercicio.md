@@ -313,6 +313,13 @@ AND reservation_id = 3;
 
 12. Actualizar el precio por noche de una habitación.
 
+```sql
+UPDATE room SET price = 310.00 WHERE room_id = 1; 
+```
+
+**Resultado:**
+
+<img width="1193" height="213" alt="12updateRoomPrice" src="https://github.com/user-attachments/assets/74a3f002-9a4a-4bb9-bcc9-dc3c67810fa6" />
 
 
 13. Cambiar el costo adicional de un servicio asignado a una habitación.
