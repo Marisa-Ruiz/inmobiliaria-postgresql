@@ -299,6 +299,16 @@ UPDATE "owner" SET phone = '699888777' WHERE owner_id = 1;
 
 11. Cambiar el estado de una reserva de `pendiente` a `confirmada`.
 
+```sql
+UPDATE reservation 
+SET status = 'confirmada' 
+WHERE status = 'pendiente' 
+AND reservation_id = 3;
+```
+
+**Resultado:**
+
+<img width="892" height="241" alt="11updateReservationStatus" src="https://github.com/user-attachments/assets/faaa2dba-ad76-42ce-8846-d99ec269d573" />
 
 
 12. Actualizar el precio por noche de una habitación.
