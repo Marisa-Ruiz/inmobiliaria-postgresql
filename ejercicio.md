@@ -199,6 +199,7 @@ SELECT * FROM "owner";
 
 <img width="1008" height="307" alt="showOwners" src="https://github.com/user-attachments/assets/574ffac6-5881-46e5-91f0-5702c77bde38" />
 
+
 3. Mostrar todos los registros de la tabla `huespedes`.
 
 ```sql
@@ -208,6 +209,7 @@ SELECT * FROM client;
 **Resultado:**
 
 <img width="1625" height="328" alt="showClients" src="https://github.com/user-attachments/assets/4e3ca447-96ff-4607-a47b-6ae228e15a14" />
+
 
 4. Mostrar todos los registros de la tabla `habitaciones`.
 
@@ -219,6 +221,7 @@ SELECT * FROM room;
 
 <img width="1162" height="313" alt="showRooms" src="https://github.com/user-attachments/assets/b863070d-6741-464b-8e55-881ccc6737e9" />
 
+
 5. Mostrar todos los registros de la tabla `reservas`.
 
 ```sql
@@ -228,6 +231,7 @@ SELECT * FROM reservation;
 **Resultado:**
 
 <img width="911" height="312" alt="showReservations" src="https://github.com/user-attachments/assets/f94f917d-fe21-4fdc-9748-9e89251f1070" />
+
 
 6. Mostrar todos los registros de la tabla `pagos`.
 
@@ -239,6 +243,7 @@ SELECT * FROM payment;
 
 img width="585" height="302" alt="showPayments" src="https://github.com/user-attachments/assets/42d242e4-b4a7-41a8-8083-4fca403797dc" />
 
+
 7. Mostrar solo el nombre y el email de los anfitriones.
 
 ```sql
@@ -248,6 +253,7 @@ SELECT "name", email FROM "owner";
 **Resultado:**
 
 <img width="437" height="300" alt="ownerNameEmail" src="https://github.com/user-attachments/assets/5e0ab1cb-28d0-406c-b6d9-4a7c324762ad" />
+
 
 8. Mostrar solo el título, tipo y ciudad de las habitaciones.
 
@@ -265,6 +271,7 @@ JOIN city ON property.city_id = city.city_id;
 
 <img width="667" height="336" alt="roomsTitleTypeCity" src="https://github.com/user-attachments/assets/93ad50e4-3225-415f-9072-3ca35a862699" />
 
+
 9. Mostrar el nombre y teléfono de los huéspedes.
 
 ```sql
@@ -276,12 +283,28 @@ FROM client;
 
 <img width="471" height="330" alt="9clientNamePhone" src="https://github.com/user-attachments/assets/ce5bb6f0-f0ae-449b-ad4a-666b48bf6143" />
 
+
 Parte 3. UPDATE
+
 10. Actualizar el teléfono de un anfitrión.
+
+
+
 11. Cambiar el estado de una reserva de `pendiente` a `confirmada`.
+
+
+
 12. Actualizar el precio por noche de una habitación.
+
+
+
 13. Cambiar el costo adicional de un servicio asignado a una habitación.
+
+
+
 14. Actualizar el monto de un pago.
+
+
 
 Parte 4. DELETE
 15. Eliminar un servicio asignado a una habitación.
