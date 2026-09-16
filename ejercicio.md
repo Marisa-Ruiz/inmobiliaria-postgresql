@@ -197,8 +197,8 @@ SELECT * FROM "owner";
 ```
 **Resultado:**
 
-![resultado punto 2](<img width="1008" height="307" alt="showOwners" src="https://github.com/user-attachments/assets/574ffac6-5881-46e5-91f0-5702c77bde38" />
-)
+resultado punto 2
+<img width="1008" height="307" alt="showOwners" src="https://github.com/user-attachments/assets/574ffac6-5881-46e5-91f0-5702c77bde38" />
 
 3. Mostrar todos los registros de la tabla `huespedes`.
 
