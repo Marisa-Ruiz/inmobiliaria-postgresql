@@ -458,6 +458,15 @@ SELECT * FROM room WHERE price > 290.00;
 <img width="1217" height="232" alt="23filterHighPriceRooms" src="https://github.com/user-attachments/assets/4780c866-8d25-4446-b40e-a5207a388b3b" />
 
 24. Mostrar las habitaciones publicadas después del `1 de enero de 2024`.
+
+```sql
+SELECT * FROM room WHERE publish_date > '2024-01-01';
+```
+
+**Resultado:**
+
+<img width="1202" height="277" alt="24filterRoomsPublishedAfterDate" src="https://github.com/user-attachments/assets/608b5ee6-0198-4816-a173-e9bac38869fa" />
+
 25. Mostrar los anfitriones cuyo nombre sea `Carlos`.
 
 Parte 6. Búsquedas con LIKE
