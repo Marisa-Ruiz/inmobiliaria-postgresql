@@ -428,7 +428,19 @@ WHERE property.property_type = 'piso';
 <img width="1381" height="202" alt="20filterSharedRooms" src="https://github.com/user-attachments/assets/cf080e65-4c75-4771-9b84-f1de41a9a09a" />
 
 21. Mostrar las reservas cuyo estado sea `pendiente`.
+
+```sql
+SELECT * FROM reservation WHERE status = 'pendiente';
+```
+
+**Resultado:**
+
+<img width="885" height="195" alt="21filterPendingReservations" src="https://github.com/user-attachments/assets/5d4d8107-fe8e-4d99-9f8d-ff6d17c816c3" />
+
 22. Mostrar las reservas cuyo estado sea `confirmada`.
+
+
+
 23. Mostrar las habitaciones cuyo precio por noche sea mayor a `120000`.
 24. Mostrar las habitaciones publicadas después del `1 de enero de 2024`.
 25. Mostrar los anfitriones cuyo nombre sea `Carlos`.
