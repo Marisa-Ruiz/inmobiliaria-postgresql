@@ -439,7 +439,13 @@ SELECT * FROM reservation WHERE status = 'pendiente';
 
 22. Mostrar las reservas cuyo estado sea `confirmada`.
 
+```sql
+SELECT * FROM reservation WHERE status = 'confirmada';
+```
 
+**Resultado:**
+
+<img width="903" height="267" alt="22filterConfirmedReservations" src="https://github.com/user-attachments/assets/0caf9dd2-9581-4258-ba47-fa4d9d0b5815" />
 
 23. Mostrar las habitaciones cuyo precio por noche sea mayor a `120000`.
 24. Mostrar las habitaciones publicadas después del `1 de enero de 2024`.
