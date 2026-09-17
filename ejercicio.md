@@ -373,6 +373,18 @@ DELETE FROM reservation WHERE reservation_id = 4;
 <img width="892" height="243" alt="16deleteReservation" src="https://github.com/user-attachments/assets/5fa5c36d-01bc-434c-a6cd-67386ab02647" />
 
 17. Intentar eliminar una habitación que tenga reservas o reseñas y explicar qué ocurre y por qué.
+
+```sql
+SELECT * FROM reservation WHERE room_id = 1;
+DELETE FROM room WHERE room_id = 1;
+```
+
+**Resultado:**
+
+<img width="1016" height="220" alt="17deleteRoomError" src="https://github.com/user-attachments/assets/0bbaf240-c929-4459-a225-d8bc839d55c8" />
+
+La base de datos no nos deja borrar la habitación y da error porque tiene una reserva vinculada. PostgreSQL impide el borrado para no dejar datos "huérfanos" o colgados (una reserva apuntando a una habitación que ya no existe). Para poder borrarla, habría que eliminar primero la reserva asociada.
+
 18. Intentar eliminar un anfitrión que tenga habitaciones registradas y explicar qué ocurre y por qué.
 
 NIVEL II
