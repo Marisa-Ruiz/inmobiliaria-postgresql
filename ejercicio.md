@@ -469,6 +469,14 @@ SELECT * FROM room WHERE publish_date > '2024-01-01';
 
 25. Mostrar los anfitriones cuyo nombre sea `Carlos`.
 
+```sql
+SELECT * FROM "owner" WHERE "name" = 'Carlos';
+```
+
+**Resultado:**
+
+<img width="956" height="187" alt="25filterOwnerCarlos" src="https://github.com/user-attachments/assets/1920ef8b-5ba1-41f9-965c-e98fc1360aa3" />
+
 Parte 6. Búsquedas con LIKE
 26. Mostrar los anfitriones cuyo nombre empiece por `L`.
 27. Mostrar los huéspedes cuyo nombre empiece por `M`.
