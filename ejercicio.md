@@ -416,7 +416,16 @@ WHERE property.property_type = 'casa';
 
 20. Mostrar las habitaciones cuyo tipo sea `Compartida`.
 
+```sql
+SELECT room.*, property.property_type
+FROM room
+JOIN property ON room.property_id = property.property_id
+WHERE property.property_type = 'piso';
+```
 
+**Resultado:**
+
+<img width="1381" height="202" alt="20filterSharedRooms" src="https://github.com/user-attachments/assets/cf080e65-4c75-4771-9b84-f1de41a9a09a" />
 
 21. Mostrar las reservas cuyo estado sea `pendiente`.
 22. Mostrar las reservas cuyo estado sea `confirmada`.
