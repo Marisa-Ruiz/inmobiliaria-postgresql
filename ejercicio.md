@@ -346,8 +346,23 @@ UPDATE payment SET amount = 350.00 WHERE payment_id = 1;
 <img width="587" height="250" alt="14updatePaymentAmount" src="https://github.com/user-attachments/assets/a18e4aa1-3e09-4f39-bc7d-19d7ff7bb335" />
 
 Parte 4. DELETE
+
 15. Eliminar un servicio asignado a una habitación.
+
+```sql
+SELECT * FROM facilities;
+DELETE FROM facilities WHERE room_id = 2;
+```
+
+**Resultado:**
+
+<img width="1917" height="292" alt="15facilities" src="https://github.com/user-attachments/assets/459448e6-461c-4403-a627-e22e11f60bd1" />
+<img width="1906" height="243" alt="15deleteRoomFacility" src="https://github.com/user-attachments/assets/25a8cfeb-a43f-40aa-b90c-a34cc8dc0fe5" />
+
 16. Eliminar una reserva específica.
+
+
+
 17. Intentar eliminar una habitación que tenga reservas o reseñas y explicar qué ocurre y por qué.
 18. Intentar eliminar un anfitrión que tenga habitaciones registradas y explicar qué ocurre y por qué.
 
