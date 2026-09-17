@@ -387,6 +387,16 @@ La base de datos no nos deja borrar la habitación y da error porque tiene una r
 
 18. Intentar eliminar un anfitrión que tenga habitaciones registradas y explicar qué ocurre y por qué.
 
+```sql
+DELETE FROM "owner" WHERE owner_id = 1;
+```
+
+**Resultado:**
+
+<img width="978" height="186" alt="18deleteOwnerError" src="https://github.com/user-attachments/assets/4d91edfa-ff76-49f9-a37e-06b76362a8b3" />
+
+La base de datos bloquea el borrado y da error porque el anfitrión tiene propiedades registradas a su nombre. PostgreSQL no permite eliminarlo para evitar que esos pisos queden "huérfanos" o colgados sin propietario en el sistema. Para poder borrar al anfitrión, habría que eliminar o reasignar primero sus propiedades.
+
 NIVEL II
 
 Parte 5. Filtros con WHERE
