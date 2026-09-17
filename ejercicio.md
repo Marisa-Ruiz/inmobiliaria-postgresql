@@ -361,7 +361,16 @@ DELETE FROM facilities WHERE room_id = 2;
 
 16. Eliminar una reserva específica.
 
+```sql
+SELECT * FROM reservation;
+DELETE FROM payment WHERE reservation_id = 4;
+DELETE FROM reservation WHERE reservation_id = 4;
+```
 
+**Resultado:**
+
+<img width="911" height="312" alt="5showReservations" src="https://github.com/user-attachments/assets/4b76cb26-1a99-4612-b335-17b42c71ab70" />
+<img width="892" height="243" alt="16deleteReservation" src="https://github.com/user-attachments/assets/5fa5c36d-01bc-434c-a6cd-67386ab02647" />
 
 17. Intentar eliminar una habitación que tenga reservas o reseñas y explicar qué ocurre y por qué.
 18. Intentar eliminar un anfitrión que tenga habitaciones registradas y explicar qué ocurre y por qué.
