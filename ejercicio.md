@@ -400,8 +400,24 @@ La base de datos bloquea el borrado y da error porque el anfitrión tiene propie
 NIVEL II
 
 Parte 5. Filtros con WHERE
+
 19. Mostrar las habitaciones cuyo tipo sea `Privada`.
+
+```sql
+SELECT room.*, property.property_type
+FROM room
+JOIN property ON room.property_id = property.property_id
+WHERE property.property_type = 'casa';
+```
+
+**Resultado:**
+
+<img width="1386" height="252" alt="19filterPrivateRooms" src="https://github.com/user-attachments/assets/173af1d2-1d58-4060-8714-6b40c71f881b" />
+
 20. Mostrar las habitaciones cuyo tipo sea `Compartida`.
+
+
+
 21. Mostrar las reservas cuyo estado sea `pendiente`.
 22. Mostrar las reservas cuyo estado sea `confirmada`.
 23. Mostrar las habitaciones cuyo precio por noche sea mayor a `120000`.
