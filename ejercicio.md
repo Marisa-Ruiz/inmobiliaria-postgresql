@@ -478,7 +478,17 @@ SELECT * FROM "owner" WHERE "name" = 'Carlos';
 <img width="956" height="187" alt="25filterOwnerCarlos" src="https://github.com/user-attachments/assets/1920ef8b-5ba1-41f9-965c-e98fc1360aa3" />
 
 Parte 6. Búsquedas con LIKE
+
 26. Mostrar los anfitriones cuyo nombre empiece por `L`.
+
+```sql
+SELECT * FROM "owner" WHERE "name" LIKE 'L%';
+```
+
+**Resultado:**
+
+<img width="946" height="243" alt="27clientsStartingWithM" src="https://github.com/user-attachments/assets/16e4245e-20fb-43d8-8d5f-57af9a466060" />
+
 27. Mostrar los huéspedes cuyo nombre empiece por `M`.
 28. Mostrar las habitaciones cuyo título contenga `Centro`.
 29. Mostrar los servicios cuyo nombre termine en `Fi`.
