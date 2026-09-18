@@ -513,6 +513,15 @@ WHERE property."name" LIKE '%Centro%';
 <img width="1376" height="207" alt="28roomsContainingCentro" src="https://github.com/user-attachments/assets/5ee21a6f-53be-4c48-954e-3c1081dc4bea" />
 
 29. Mostrar los servicios cuyo nombre termine en `Fi`.
+
+```sql
+SELECT * FROM facilities WHERE type_cousine LIKE '%Fi';
+```
+
+**Resultado:**
+
+<img width="1907" height="198" alt="29facilitiesEndingWithFi" src="https://github.com/user-attachments/assets/b75e6aaa-4fb3-4cf6-a869-bcec21219042" />
+
 30. Mostrar las habitaciones cuya ciudad contenga la letra `a`.
 
 Parte 7. Ordenamiento
