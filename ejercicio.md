@@ -524,6 +524,18 @@ SELECT * FROM facilities WHERE type_cousine LIKE '%Fi';
 
 30. Mostrar las habitaciones cuya ciudad contenga la letra `a`.
 
+```sql
+SELECT room.*, city.neihborhood AS ciudad
+FROM room
+JOIN property ON room.property_id = property.property_id
+JOIN city ON property.city_id = city.city_id
+WHERE city.neihborhood ILIKE '%a%';
+```
+
+**Resultado:**
+
+<img width="1395" height="301" alt="30roomsCityContainingA" src="https://github.com/user-attachments/assets/dcd5da19-209a-4822-8f03-4e92c3814650" />
+
 Parte 7. Ordenamiento
 30. Mostrar las habitaciones ordenadas alfabéticamente por título.
 31. Mostrar las habitaciones ordenadas de mayor a menor precio por noche.
