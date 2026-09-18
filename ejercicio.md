@@ -487,9 +487,18 @@ SELECT * FROM "owner" WHERE "name" LIKE 'L%';
 
 **Resultado:**
 
-<img width="946" height="243" alt="27clientsStartingWithM" src="https://github.com/user-attachments/assets/16e4245e-20fb-43d8-8d5f-57af9a466060" />
+<img width="946" height="243" alt="26ownersStartingWithL" src="https://github.com/user-attachments/assets/d18178dc-04ef-4e5a-bfcc-90856bb3d7a0" />
 
 27. Mostrar los huéspedes cuyo nombre empiece por `M`.
+
+```sql
+SELECT * FROM client WHERE "name" LIKE 'M%';
+```
+
+**Resultado:**
+
+<img width="1822" height="192" alt="27clientsStartingWithM" src="https://github.com/user-attachments/assets/734587cc-0957-40ca-b6ce-fe03c76d193d" />
+
 28. Mostrar las habitaciones cuyo título contenga `Centro`.
 29. Mostrar los servicios cuyo nombre termine en `Fi`.
 30. Mostrar las habitaciones cuya ciudad contenga la letra `a`.
