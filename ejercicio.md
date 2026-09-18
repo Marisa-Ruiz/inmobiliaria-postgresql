@@ -500,6 +500,18 @@ SELECT * FROM client WHERE "name" LIKE 'M%';
 <img width="1822" height="192" alt="27clientsStartingWithM" src="https://github.com/user-attachments/assets/734587cc-0957-40ca-b6ce-fe03c76d193d" />
 
 28. Mostrar las habitaciones cuyo título contenga `Centro`.
+
+```sql
+<SELECT room.*, property."name" AS nombre_propiedad
+FROM room
+JOIN property ON room.property_id = property.property_id
+WHERE property."name" LIKE '%Centro%';
+```
+
+**Resultado:**
+
+<img width="1376" height="207" alt="28roomsContainingCentro" src="https://github.com/user-attachments/assets/5ee21a6f-53be-4c48-954e-3c1081dc4bea" />
+
 29. Mostrar los servicios cuyo nombre termine en `Fi`.
 30. Mostrar las habitaciones cuya ciudad contenga la letra `a`.
 
