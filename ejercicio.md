@@ -753,12 +753,12 @@ JOIN client ON reservation.client_id = client.client_id;
 44. Mostrar los servicios asignados a cada habitación.
 
 ```sql
-SELECT * FROM reservation WHERE status = 'confirmada';
+SELECT room.room\_id, room."name" AS habitacion, facilities.bathroom AS baño\_privado, facilities.air\_conditioning AS aire\_acondicionado, facilities.heating AS calefaccion, facilities.terrace AS terraza, facilities.lighting AS iluminacion, facilities.orientation AS orientacion FROM room JOIN facilities ON room.room\_id = facilities.room\_id;
 ```
 
 **Resultado:**
 
-<
+<img width="1232" height="180" alt="44roomsAndFacilities" src="https://github.com/user-attachments/assets/417919da-f88e-4512-a296-976d31cec7f5" />
 
 45. Mostrar habitación, servicio, costo_adicional y disponibilidad.
 
