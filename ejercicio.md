@@ -663,12 +663,19 @@ JOIN "owner" ON property.owner_id = "owner".owner_id;
 39. Mostrar el título, tipo de habitación y nombre del anfitrión.
 
 ```sql
-SELECT * FROM reservation WHERE status = 'confirmada';
+SELECT 
+room."name" AS titulo_habitacion, 
+property.property_type AS tipo_propiedad, 
+"owner"."name" AS nombre_anfitrion, 
+"owner".surname AS apellido_anfitrion 
+FROM room 
+JOIN property ON room.property_id = property.property_id 
+JOIN "owner" ON property.owner_id = "owner".owner_id;
 ```
 
 **Resultado:**
 
-<
+<img width="837" height="272" alt="39roomTitleTypeOwner" src="https://github.com/user-attachments/assets/96407038-8005-4b2c-9541-43688665353f" />
 
 40. Mostrar las reservas junto con el nombre del huésped.
 
