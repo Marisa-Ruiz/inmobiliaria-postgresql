@@ -555,6 +555,18 @@ ORDER BY "name" ASC;
 ```sql
 SELECT * 
 FROM room 
+ORDER BY price DESC;
+```
+
+**Resultado:**
+
+<img width="1217" height="292" alt="31roomsOrderByPriceDesc" src="https://github.com/user-attachments/assets/971e6d22-6c9e-42c4-a757-ba172f2aba6d" />
+
+32. Mostrar las reservas ordenadas por fecha de check-in, de la más próxima a la más lejana.
+
+```sql
+SELECT * 
+FROM room 
 ORDER BY "name" ASC;
 ```
 
@@ -562,14 +574,67 @@ ORDER BY "name" ASC;
 
 <
 
-32. Mostrar las reservas ordenadas por fecha de check-in, de la más próxima a la más lejana.
 33. Mostrar los anfitriones ordenados por nombre descendente.
 
+```sql
+SELECT * 
+FROM room 
+ORDER BY "name" ASC;
+```
+
+**Resultado:**
+
+<
+
 Parte 8. Rangos y listas
+
 34. Mostrar las habitaciones con precio por noche entre `80000` y `200000`.
+
+```sql
+SELECT * 
+FROM room 
+ORDER BY "name" ASC;
+```
+
+**Resultado:**
+
+<
+
 35. Mostrar las habitaciones cuyo tipo esté entre `Privada` y `Compartida` usando `IN`.
+
+```sql
+SELECT * 
+FROM room 
+ORDER BY "name" ASC;
+```
+
+**Resultado:**
+
+<
+
 36. Mostrar las reservas cuyo estado sea `pendiente` o `confirmada`.
+
+```sql
+SELECT * 
+FROM room 
+ORDER BY "name" ASC;
+```
+
+**Resultado:**
+
+<
+
 37. Mostrar las habitaciones ubicadas en `Bogotá` o `Medellín`.
+
+```sql
+SELECT * 
+FROM room 
+ORDER BY "name" ASC;
+```
+
+**Resultado:**
+
+<
 
 NIVEL III
 
