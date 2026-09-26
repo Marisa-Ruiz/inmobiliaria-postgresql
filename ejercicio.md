@@ -566,13 +566,13 @@ ORDER BY price DESC;
 
 ```sql
 SELECT * 
-FROM room 
-ORDER BY "name" ASC;
+FROM reservation 
+ORDER BY start_date ASC;
 ```
 
 **Resultado:**
 
-<
+<img width="896" height="271" alt="32reservationsOrderByStartDateAsc" src="https://github.com/user-attachments/assets/54684a8f-e801-468d-a7a0-660f94c6322b" />
 
 33. Mostrar los anfitriones ordenados por nombre descendente.
 
