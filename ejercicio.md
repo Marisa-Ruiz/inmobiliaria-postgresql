@@ -629,19 +629,25 @@ WHERE status IN ('pendiente', 'confirmada');
 37. Mostrar las habitaciones ubicadas en `Bogotá` o `Medellín`.
 
 ```sql
-SELECT * 
+SELECT room.*, city.neihborhood AS ciudad 
 FROM room 
-ORDER BY "name" ASC;
+JOIN property ON room.property_id = property.property_id 
+JOIN city ON property.city_id = city.city_id 
+WHERE city.neihborhood IN ('Realejo', 'Albaicín');
 ```
 
 **Resultado:**
 
-<
+<img width="1377" height="272" alt="37roomsInCitiesList" src="https://github.com/user-attachments/assets/21b51d8f-4300-4ab9-bfa9-a56c0d0b5486" />
 
 NIVEL III
 
 Parte 9. Relaciones con JOIN
+
 38. Mostrar el título de cada habitación junto con el nombre de su anfitrión.
+
+
+
 39. Mostrar el título, tipo de habitación y nombre del anfitrión.
 40. Mostrar las reservas junto con el nombre del huésped.
 41. Mostrar las reservas junto con el título de la habitación.
