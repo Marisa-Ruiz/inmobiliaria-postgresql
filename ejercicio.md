@@ -578,13 +578,14 @@ ORDER BY start_date ASC;
 
 ```sql
 SELECT * 
-FROM room 
-ORDER BY "name" ASC;
+FROM "owner" 
+ORDER BY "name" DESC;
 ```
 
 **Resultado:**
 
-<
+<img width="971" height="295" alt="33ownersOrderByNameDesc" src="https://github.com/user-attachments/assets/4eb1f1a5-66e6-41be-ac64-b2b352fc2785" />
+
 
 Parte 8. Rangos y listas
 
