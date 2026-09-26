@@ -680,12 +680,20 @@ JOIN "owner" ON property.owner_id = "owner".owner_id;
 40. Mostrar las reservas junto con el nombre del huésped.
 
 ```sql
-SELECT * FROM reservation WHERE status = 'confirmada';
+SELECT 
+reservation.reservation_id, 
+client."name" AS nombre_huesped, 
+client.surname AS apellido_huesped, 
+reservation.status AS estado_reserva, 
+reservation.start_date, 
+reservation.end_date 
+FROM reservation 
+JOIN client ON reservation.client_id = client.client_id;
 ```
 
 **Resultado:**
 
-<
+<img width="977" height="246" alt="40reservationsAndClientName" src="https://github.com/user-attachments/assets/f541856b-4201-48d2-92dc-e5fa0df86dc4" />
 
 41. Mostrar las reservas junto con el título de la habitación.
 
