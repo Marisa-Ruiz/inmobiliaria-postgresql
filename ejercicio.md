@@ -537,8 +537,31 @@ WHERE city.neihborhood ILIKE '%a%';
 <img width="1395" height="301" alt="30roomsCityContainingA" src="https://github.com/user-attachments/assets/dcd5da19-209a-4822-8f03-4e92c3814650" />
 
 Parte 7. Ordenamiento
+
 30. Mostrar las habitaciones ordenadas alfabéticamente por título.
+
+```sql
+SELECT * 
+FROM room 
+ORDER BY "name" ASC;
+```
+
+**Resultado:**
+
+<img width="1211" height="281" alt="30roomsOrderByNameAsc" src="https://github.com/user-attachments/assets/f5482386-d0aa-4e23-bd73-878c4c0bd3c6" />
+
 31. Mostrar las habitaciones ordenadas de mayor a menor precio por noche.
+
+```sql
+SELECT * 
+FROM room 
+ORDER BY "name" ASC;
+```
+
+**Resultado:**
+
+<
+
 32. Mostrar las reservas ordenadas por fecha de check-in, de la más próxima a la más lejana.
 33. Mostrar los anfitriones ordenados por nombre descendente.
 
