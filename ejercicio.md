@@ -715,12 +715,22 @@ JOIN room ON reservation.room_id = room.room_id;
 42. Mostrar las reservas con id de reserva, huésped, habitación, fecha check-in, fecha check-out y estado.
 
 ```sql
-SELECT * FROM reservation WHERE status = 'confirmada';
+SELECT 
+reservation.reservation_id, 
+CONCAT(client."name", ' ', 
+client.surname) AS huesped, 
+room."name" AS habitacion, 
+reservation.start_date AS fecha_check_in, 
+reservation.end\_date AS fecha_check_out, 
+reservation.status AS estado 
+FROM reservation 
+JOIN client ON reservation.client_id = client.client_id 
+LEFT JOIN room ON reservation.room_id = room.room_id;
 ```
 
 **Resultado:**
 
-<
+<img width="787" height="216" alt="42reservationsFullDetails" src="https://github.com/user-attachments/assets/118d61a7-c00c-4b81-99da-8d226eb8d54a" />
 
 43. Mostrar los pagos junto con el nombre del huésped.
 
