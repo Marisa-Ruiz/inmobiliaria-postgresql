@@ -646,17 +646,110 @@ Parte 9. Relaciones con JOIN
 
 38. Mostrar el título de cada habitación junto con el nombre de su anfitrión.
 
+```sql
+SELECT 
+room."name" AS habitacion, 
+"owner"."name" AS nombre_anfitrion, 
+"owner".surname AS apellido_anfitrion 
+FROM room 
+JOIN property ON room.property_id = property.property_id 
+JOIN "owner" ON property.owner_id = "owner".owner_id;
+```
 
+**Resultado:**
+
+<img width="657" height="282" alt="38roomTitleAndOwnerName" src="https://github.com/user-attachments/assets/a3a6c284-6af1-435f-9ea3-a0de5430e27e" />
 
 39. Mostrar el título, tipo de habitación y nombre del anfitrión.
+
+```sql
+SELECT * FROM reservation WHERE status = 'confirmada';
+```
+
+**Resultado:**
+
+<
+
 40. Mostrar las reservas junto con el nombre del huésped.
+
+```sql
+SELECT * FROM reservation WHERE status = 'confirmada';
+```
+
+**Resultado:**
+
+<
+
 41. Mostrar las reservas junto con el título de la habitación.
+
+```sql
+SELECT * FROM reservation WHERE status = 'confirmada';
+```
+
+**Resultado:**
+
+<
+
 42. Mostrar las reservas con id de reserva, huésped, habitación, fecha check-in, fecha check-out y estado.
+
+```sql
+SELECT * FROM reservation WHERE status = 'confirmada';
+```
+
+**Resultado:**
+
+<
+
 43. Mostrar los pagos junto con el nombre del huésped.
+
+```sql
+SELECT * FROM reservation WHERE status = 'confirmada';
+```
+
+**Resultado:**
+
+<
+
 44. Mostrar los servicios asignados a cada habitación.
+
+```sql
+SELECT * FROM reservation WHERE status = 'confirmada';
+```
+
+**Resultado:**
+
+<
+
 45. Mostrar habitación, servicio, costo_adicional y disponibilidad.
+
+```sql
+SELECT * FROM reservation WHERE status = 'confirmada';
+```
+
+**Resultado:**
+
+<
+
 46. Mostrar todas las habitaciones con su anfitrión y sus reseñas.
+
+```sql
+SELECT * FROM reservation WHERE status = 'confirmada';
+```
+
+**Resultado:**
+
+<
+
 47. Mostrar todas las reservas con huésped, anfitrión y habitación.
+
+
+```sql
+SELECT * FROM reservation WHERE status = 'confirmada';
+```
+
+**Resultado:**
+
+<
 
 Parte 10. Consultas de negocio con JOIN
 48. ¿Qué habitaciones pertenecen al anfitrión `Carlos Ramírez`?
