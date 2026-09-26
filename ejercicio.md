@@ -698,12 +698,19 @@ JOIN client ON reservation.client_id = client.client_id;
 41. Mostrar las reservas junto con el título de la habitación.
 
 ```sql
-SELECT * FROM reservation WHERE status = 'confirmada';
+SELECT 
+reservation.reservation_id, 
+room."name" AS titulo_habitacion, 
+reservation.status AS estado_reserva, 
+reservation.start_date, 
+reservation.end_date 
+FROM reservation 
+JOIN room ON reservation.room_id = room.room_id;
 ```
 
 **Resultado:**
 
-<
+<img width="787" height="217" alt="41reservationsAndRoomTitle" src="https://github.com/user-attachments/assets/1f476503-b816-4f20-b6d6-ec2a5224467a" />
 
 42. Mostrar las reservas con id de reserva, huésped, habitación, fecha check-in, fecha check-out y estado.
 
