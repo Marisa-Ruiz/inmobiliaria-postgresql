@@ -594,12 +594,12 @@ Parte 8. Rangos y listas
 ```sql
 SELECT * 
 FROM room 
-ORDER BY "name" ASC;
+WHERE price BETWEEN 280.00 AND 310.00;
 ```
 
 **Resultado:**
 
-<
+<img width="1203" height="262" alt="34roomsPriceBetweenRange" src="https://github.com/user-attachments/assets/8f0815f9-b53b-4ae2-9164-5becd29ac324" />
 
 35. Mostrar las habitaciones cuyo tipo esté entre `Privada` y `Compartida` usando `IN`.
 
