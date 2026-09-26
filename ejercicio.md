@@ -735,12 +735,20 @@ LEFT JOIN room ON reservation.room_id = room.room_id;
 43. Mostrar los pagos junto con el nombre del huésped.
 
 ```sql
-SELECT * FROM reservation WHERE status = 'confirmada';
+SELECT 
+payment.payment_id, 
+CONCAT(client."name", ' ', 
+client.surname) AS huesped, 
+payment.deposit AS fianza, 
+payment.amount AS monto_pagado 
+FROM payment 
+JOIN reservation ON payment.reservation_id = reservation.reservation_id 
+JOIN client ON reservation.client_id = client.client_id;
 ```
 
 **Resultado:**
 
-<
+<img width="562" height="248" alt="43paymentsAndClientName" src="https://github.com/user-attachments/assets/63d12734-254f-4aca-8539-1dd6c713c608" />
 
 44. Mostrar los servicios asignados a cada habitación.
 
