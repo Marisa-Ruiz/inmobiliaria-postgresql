@@ -618,13 +618,13 @@ WHERE property.property_type IN ('piso', 'casa');
 
 ```sql
 SELECT * 
-FROM room 
-ORDER BY "name" ASC;
+FROM reservation 
+WHERE status IN ('pendiente', 'confirmada');
 ```
 
 **Resultado:**
 
-<
+<img width="896" height="243" alt="36reservationsStatusPendingOrConfirmed" src="https://github.com/user-attachments/assets/b9d045ee-ef0c-4307-8320-10ec95fc26a8" />
 
 37. Mostrar las habitaciones ubicadas en `Bogotá` o `Medellín`.
 
