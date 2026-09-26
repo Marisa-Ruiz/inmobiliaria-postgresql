@@ -604,14 +604,15 @@ WHERE price BETWEEN 280.00 AND 310.00;
 35. Mostrar las habitaciones cuyo tipo esté entre `Privada` y `Compartida` usando `IN`.
 
 ```sql
-SELECT * 
+SELECT room.*, property.property_type
 FROM room 
-ORDER BY "name" ASC;
+JOIN property ON room.property_id = property.property_id 
+WHERE property.property_type IN ('piso', 'casa');
 ```
 
 **Resultado:**
 
-<
+<img width="1378" height="285" alt="35roomsTypeInList" src="https://github.com/user-attachments/assets/7cf09d30-63fd-432e-a374-3b511f3878a8" />
 
 36. Mostrar las reservas cuyo estado sea `pendiente` o `confirmada`.
 
