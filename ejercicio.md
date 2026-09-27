@@ -1179,12 +1179,17 @@ HAVING COUNT(room.room_id) > 1;
 71. Mostrar los tipos de habitación que tengan más de una publicación.
 
 ```sql
-X
+SELECT 
+property_type AS tipo_inmueble, 
+COUNT(*) AS total_publicaciones 
+FROM property 
+GROUP BY property_type 
+HAVING COUNT(*) > 1;
 ```
 
 **Resultado:**
 
-<
+<img width="432" height="192" alt="71propertyTypesWithMoreThanOne" src="https://github.com/user-attachments/assets/c631120f-1067-4a38-b69a-1a9bdce5addb" />
 
 72. Mostrar los huéspedes que tengan más de una reserva.
 
