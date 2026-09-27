@@ -1059,18 +1059,113 @@ SELECT SUM(amount) AS total_ingresos FROM payment;
 <img width="217" height="183" alt="63sumTotalPayments" src="https://github.com/user-attachments/assets/9171bd9e-bc54-4706-95ac-c4e38461567e" />
 
 Parte 12. GROUP BY
+
 64. ¿Cuántas habitaciones hay por tipo?
+
+```sql
+SELECT 
+property.property_type AS tipo_inmueble, 
+COUNT(room.room_id) AS total_habitaciones 
+FROM room 
+JOIN property ON room.property_id = property.property_id 
+GROUP BY property.property_type;
+```
+
+**Resultado:**
+
+<img width="437" height="233" alt="64roomsByPropertyType" src="https://github.com/user-attachments/assets/dd9ba1d3-4299-4a2b-bdde-abffbf24072f" />
+
 65. ¿Cuántas habitaciones tiene cada anfitrión?
+
+```sql
+X
+```
+
+**Resultado:**
+
+<
+
 66. ¿Cuántas reservas tiene cada huésped?
+
+```sql
+X
+```
+
+**Resultado:**
+
+<
+
 67. ¿Cuántas reservas tiene cada habitación?
+
+```sql
+X
+```
+
+**Resultado:**
+
+<
+
 68. ¿Cuántos servicios tiene asignados cada habitación?
+
+```sql
+X
+```
+
+**Resultado:**
+
+<
+
 69. ¿Cuál es el precio promedio por noche por ciudad?
 
+```sql
+X
+```
+
+**Resultado:**
+
+<
+
 Parte 13. GROUP BY + HAVING
+
 70. Mostrar los anfitriones que tengan más de una habitación.
+
+```sql
+X
+```
+
+**Resultado:**
+
+<
+
 71. Mostrar los tipos de habitación que tengan más de una publicación.
+
+```sql
+X
+```
+
+**Resultado:**
+
+<
+
 72. Mostrar los huéspedes que tengan más de una reserva.
+
+```sql
+X
+```
+
+**Resultado:**
+
+<
+
 73. Mostrar las habitaciones que tengan más de un servicio asignado.
+
+```sql
+X
+```
+
+**Resultado:**
+
+<
 
 NIVEL IV NO OBLIGATORIO
 
