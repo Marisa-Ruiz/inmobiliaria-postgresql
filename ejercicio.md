@@ -1194,12 +1194,20 @@ HAVING COUNT(*) > 1;
 72. Mostrar los huéspedes que tengan más de una reserva.
 
 ```sql
-X
+SELECT 
+client.client_id, 
+CONCAT(client."name", ' ', 
+client.surname) AS huesped, 
+COUNT(reservation.reservation_id) AS total_reservas 
+FROM client 
+JOIN reservation ON client.client_id = reservation.client_id 
+GROUP BY client.client_id, client."name", client.surname 
+HAVING COUNT(reservation.reservation_id) > 1;
 ```
 
 **Resultado:**
 
-<
+<img width="425" height="167" alt="72clientsWithMoreThanOneReservation" src="https://github.com/user-attachments/assets/42b6b0dc-a4e4-49c4-91bc-9ba22dd3ac03" />
 
 73. Mostrar las habitaciones que tengan más de un servicio asignado.
 
