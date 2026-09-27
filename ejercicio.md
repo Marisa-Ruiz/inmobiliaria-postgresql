@@ -1001,14 +1001,12 @@ SELECT COUNT(*) AS total_huespedes FROM client;
 58. ¿Cuántas habitaciones hay publicadas?
 
 ```sql
-SELECT * 
-FROM reservation 
-WHERE status IN ('pendiente', 'confirmada');
+SELECT COUNT(*) AS total_habitaciones FROM room;
 ```
 
 **Resultado:**
 
-<
+<img width="253" height="183" alt="58countRooms" src="https://github.com/user-attachments/assets/9d01e2ab-b706-4923-9203-339f4d5cfb23" />
 
 59. ¿Cuántas reservas hay registradas?
 
