@@ -828,24 +828,202 @@ LEFT JOIN "owner" ON property.owner_id = "owner".owner_id;
 <img width="977" height="277" alt="47reservationsClientOwnerRoom" src="https://github.com/user-attachments/assets/21a1ad06-a02c-49eb-8a81-7c624675e729" />
 
 Parte 10. Consultas de negocio con JOIN
+
 48. ¿Qué habitaciones pertenecen al anfitrión `Carlos Ramírez`?
+
+```sql
+SELECT 
+room.room_id, 
+room."name" AS habitacion, 
+property."name" AS inmueble, 
+CONCAT("owner"."name", ' ', "owner".surname) AS anfitrion 
+FROM room 
+JOIN property ON room.property_id = property.property_id 
+JOIN "owner" ON property.owner_id = "owner".owner_id 
+WHERE "owner"."name" = 'Carlos' AND "owner".surname = 'Ramírez';
+```
+
+**Resultado:**
+
+<img width="678" height="212" alt="48roomsByOwnerCarlosRamirez" src="https://github.com/user-attachments/assets/139832e6-06e2-4430-9386-d93469a4cd5d" />
+
 49. ¿Qué reservas tiene el huésped `Paula Ríos`?
+
+```sql
+SELECT * 
+FROM reservation 
+WHERE status IN ('pendiente', 'confirmada');
+```
+
+**Resultado:**
+
+<
+
 50. ¿Qué servicios tiene asignados la habitación `Loft Central`?
+
+```sql
+SELECT * 
+FROM reservation 
+WHERE status IN ('pendiente', 'confirmada');
+```
+
+**Resultado:**
+
+<
+
 51. ¿Qué huésped reservó la habitación `Suite Norte`?
+
+```sql
+SELECT * 
+FROM reservation 
+WHERE status IN ('pendiente', 'confirmada');
+```
+
+**Resultado:**
+
+<
+
 52. ¿Qué habitaciones tienen al menos una reseña registrada?
+
+```sql
+SELECT * 
+FROM reservation 
+WHERE status IN ('pendiente', 'confirmada');
+```
+
+**Resultado:**
+
+<
+
 53. ¿Qué habitaciones no tienen reseñas registradas? Sugerencia: usar `LEFT JOIN`.
+
+```sql
+SELECT * 
+FROM reservation 
+WHERE status IN ('pendiente', 'confirmada');
+```
+
+**Resultado:**
+
+<
+
 54. ¿Qué habitaciones tienen servicios asignados?
+
+```sql
+SELECT * 
+FROM reservation 
+WHERE status IN ('pendiente', 'confirmada');
+```
+
+**Resultado:**
+
+<
+
 55. ¿Qué habitaciones no tienen servicios asignados?
 
+
+
 Parte 11. Funciones de agregación
+
 56. ¿Cuántos anfitriones hay registrados?
+
+```sql
+SELECT * 
+FROM reservation 
+WHERE status IN ('pendiente', 'confirmada');
+```
+
+**Resultado:**
+
+<
+
 57. ¿Cuántos huéspedes hay registrados?
+
+
+
+```sql
+SELECT * 
+FROM reservation 
+WHERE status IN ('pendiente', 'confirmada');
+```
+
+**Resultado:**
+
+<
+
 58. ¿Cuántas habitaciones hay publicadas?
+
+```sql
+SELECT * 
+FROM reservation 
+WHERE status IN ('pendiente', 'confirmada');
+```
+
+**Resultado:**
+
+<
+
 59. ¿Cuántas reservas hay registradas?
+
+
+
+```sql
+SELECT * 
+FROM reservation 
+WHERE status IN ('pendiente', 'confirmada');
+```
+
+**Resultado:**
+
+<
+
 60. ¿Cuál es el precio promedio por noche de las habitaciones?
+
+```sql
+SELECT * 
+FROM reservation 
+WHERE status IN ('pendiente', 'confirmada');
+```
+
+**Resultado:**
+
+<
+
 61. ¿Cuál es la habitación más costosa por noche?
+
+```sql
+SELECT * 
+FROM reservation 
+WHERE status IN ('pendiente', 'confirmada');
+```
+
+**Resultado:**
+
+<
+
 62. ¿Cuál es la habitación más económica por noche?
+
+```sql
+SELECT * 
+FROM reservation 
+WHERE status IN ('pendiente', 'confirmada');
+```
+
+**Resultado:**
+
+<
+
 63. ¿Cuál es la suma total de ingresos registrados en pagos?
+
+```sql
+SELECT * 
+FROM reservation 
+WHERE status IN ('pendiente', 'confirmada');
+```
+
+**Resultado:**
+
+<
 
 Parte 12. GROUP BY
 64. ¿Cuántas habitaciones hay por tipo?
