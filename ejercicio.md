@@ -1212,12 +1212,19 @@ HAVING COUNT(reservation.reservation_id) > 1;
 73. Mostrar las habitaciones que tengan más de un servicio asignado.
 
 ```sql
-X
+SELECT 
+room.room_id, 
+room."name" AS habitacion, 
+COUNT(facilities.facilities_id) AS total_servicios 
+FROM room 
+JOIN facilities ON room.room_id = facilities.room_id 
+GROUP BY room.room_id, room."name" 
+HAVING COUNT(facilities.facilities_id) > 1;
 ```
 
 **Resultado:**
 
-<
+<img width="517" height="151" alt="73roomsWithMoreThanOneFacility" src="https://github.com/user-attachments/assets/78737e3c-fcd0-4c20-a4f5-0158124bfd1d" />
 
 NIVEL IV NO OBLIGATORIO
 
