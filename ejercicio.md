@@ -1078,12 +1078,19 @@ GROUP BY property.property_type;
 65. ¿Cuántas habitaciones tiene cada anfitrión?
 
 ```sql
-X
+SELECT 
+CONCAT("owner"."name", ' ', 
+"owner".surname) AS anfitrion, 
+COUNT(room.room_id) AS total_habitaciones 
+FROM "owner" 
+LEFT JOIN property ON "owner".owner_id = property.owner_id 
+LEFT JOIN room ON property.property_id = room.property_id 
+GROUP BY "owner".owner_id, "owner"."name", "owner".surname;
 ```
 
 **Resultado:**
 
-<
+<img width="372" height="277" alt="65roomsPerOwner" src="https://github.com/user-attachments/assets/eb7c1b72-169b-45db-9f20-7f1ab70c754e" />
 
 66. ¿Cuántas reservas tiene cada huésped?
 
