@@ -1031,14 +1031,12 @@ SELECT ROUND(AVG(price), 2) AS precio_medio FROM room;
 61. ¿Cuál es la habitación más costosa por noche?
 
 ```sql
-SELECT * 
-FROM reservation 
-WHERE status IN ('pendiente', 'confirmada');
+SELECT MAX(price) AS habitacion_mas_costosa FROM room;
 ```
 
 **Resultado:**
 
-<
+<img width="292" height="192" alt="61maxRoomPrice" src="https://github.com/user-attachments/assets/ef12fedb-1e5e-4b5d-a061-a006485c79c5" />
 
 62. ¿Cuál es la habitación más económica por noche?
 
