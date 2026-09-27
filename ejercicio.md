@@ -763,12 +763,12 @@ SELECT room.room\_id, room."name" AS habitacion, facilities.bathroom AS baño\_p
 45. Mostrar habitación, servicio, costo_adicional y disponibilidad.
 
 ```sql
-SELECT * FROM reservation WHERE status = 'confirmada';
+SELECT room."name" AS habitacion, facilities.air\_conditioning AS aire\_acondicionado, facilities.heating AS calefaccion, facilities.terrace AS terraza, room.price AS costo\_precio, room.status AS disponibilidad FROM room LEFT JOIN facilities ON room.room\_id = facilities.room\_id;
 ```
 
 **Resultado:**
 
-<
+<img width="977" height="287" alt="45roomsFacilitiesCostAvailability" src="https://github.com/user-attachments/assets/6d906455-6b3d-45c7-af77-bc620e08119f" />
 
 46. Mostrar todas las habitaciones con su anfitrión y sus reseñas.
 
