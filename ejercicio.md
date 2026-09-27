@@ -1041,14 +1041,12 @@ SELECT MAX(price) AS habitacion_mas_costosa FROM room;
 62. ¿Cuál es la habitación más económica por noche?
 
 ```sql
-SELECT * 
-FROM reservation 
-WHERE status IN ('pendiente', 'confirmada');
+SELECT MIN(price) AS habitacion_mas_economica FROM room;
 ```
 
 **Resultado:**
 
-<
+<img width="307" height="195" alt="62minRoomPrice" src="https://github.com/user-attachments/assets/a279e336-b123-4872-8b35-d1900ba5a3f8" />
 
 63. ¿Cuál es la suma total de ingresos registrados en pagos?
 
