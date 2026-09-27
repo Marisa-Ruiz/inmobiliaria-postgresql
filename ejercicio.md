@@ -1021,14 +1021,12 @@ SELECT COUNT(*) AS total_reservas FROM reservation;
 60. ¿Cuál es el precio promedio por noche de las habitaciones?
 
 ```sql
-SELECT * 
-FROM reservation 
-WHERE status IN ('pendiente', 'confirmada');
+SELECT ROUND(AVG(price), 2) AS precio_medio FROM room;
 ```
 
 **Resultado:**
 
-<
+<img width="212" height="185" alt="60avgRoomPrice" src="https://github.com/user-attachments/assets/d5d9f0d1-ed20-4672-867b-cb22ce58469c" />
 
 61. ¿Cuál es la habitación más costosa por noche?
 
