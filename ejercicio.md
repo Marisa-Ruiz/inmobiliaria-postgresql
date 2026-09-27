@@ -798,7 +798,8 @@ review.review_text AS resena,
 review.punctuation AS puntuacion
 FROM room JOIN property ON room.property_id = property.property_id
 JOIN "owner" ON property.owner_id = "owner".owner_id
-LEFT JOIN review ON property.property\_id = review.property\_id;```
+LEFT JOIN review ON property.property\_id = review.property\_id;
+```
 
 **Resultado:**
 
@@ -806,14 +807,25 @@ LEFT JOIN review ON property.property\_id = review.property\_id;```
 
 47. Mostrar todas las reservas con huésped, anfitrión y habitación.
 
-
 ```sql
-SELECT * FROM reservation WHERE status = 'confirmada';
+SELECT 
+reservation.reservation_id, 
+CONCAT(client."name", ' ', 
+client.surname) AS huesped, 
+room."name" AS habitacion, 
+CONCAT("owner"."name", ' ', "owner".surname) AS anfitrion, 
+reservation.start_date AS fecha_check_in, 
+reservation.status AS estado 
+FROM reservation 
+JOIN client ON reservation.client_id = client.client_id 
+LEFT JOIN room ON reservation.room_id = room.room_id 
+LEFT JOIN property ON room.property_id = property.property_id 
+LEFT JOIN "owner" ON property.owner_id = "owner".owner_id;
 ```
 
 **Resultado:**
 
-<
+<img width="977" height="277" alt="47reservationsClientOwnerRoom" src="https://github.com/user-attachments/assets/21a1ad06-a02c-49eb-8a81-7c624675e729" />
 
 Parte 10. Consultas de negocio con JOIN
 48. ¿Qué habitaciones pertenecen al anfitrión `Carlos Ramírez`?
