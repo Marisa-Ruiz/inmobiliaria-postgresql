@@ -870,14 +870,22 @@ WHERE client."name" = 'Paula' AND client.surname = 'Ríos';
 50. ¿Qué servicios tiene asignados la habitación `Loft Central`?
 
 ```sql
-SELECT * 
-FROM reservation 
-WHERE status IN ('pendiente', 'confirmada');
+SELECT 
+room."name" AS habitacion, 
+facilities.bathroom AS baño_privado, 
+facilities.number_bathroom AS num_baños, 
+facilities.air_conditioning AS aire_acondicionado, 
+facilities.heating AS calefaccion, 
+facilities.lighting AS iluminacion, 
+facilities.orientation AS orientacion 
+FROM room 
+JOIN facilities ON room.room_id = facilities.room_id 
+WHERE room."name" = 'Habitación Norte';
 ```
 
 **Resultado:**
 
-<
+<img width="1171" height="191" alt="50roomFacilitiesAssigned" src="https://github.com/user-attachments/assets/e2abfd71-57bb-4a73-b6d8-c55f275d1ba2" />
 
 51. ¿Qué huésped reservó la habitación `Suite Norte`?
 
