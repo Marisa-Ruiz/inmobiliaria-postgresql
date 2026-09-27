@@ -1161,12 +1161,20 @@ Parte 13. GROUP BY + HAVING
 70. Mostrar los anfitriones que tengan más de una habitación.
 
 ```sql
-X
+SELECT 
+CONCAT("owner"."name", ' ', 
+"owner".surname) AS anfitrion, 
+COUNT(room.room_id) AS total_habitaciones 
+FROM "owner" 
+JOIN property ON "owner".owner_id = property.owner_id
+JOIN room ON property.property_id = room.property_id 
+GROUP BY "owner".owner_id, "owner"."name", "owner".surname 
+HAVING COUNT(room.room_id) > 1;
 ```
 
 **Resultado:**
 
-<
+<img width="348" height="180" alt="70ownersWithMoreThanOneRoom" src="https://github.com/user-attachments/assets/5d2f9f5f-e97f-4cc3-83a9-128131fdf004" />
 
 71. Mostrar los tipos de habitación que tengan más de una publicación.
 
