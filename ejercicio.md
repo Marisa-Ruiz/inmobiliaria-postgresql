@@ -927,14 +927,21 @@ JOIN review ON property.property_id = review.property_id;
 53. ¿Qué habitaciones no tienen reseñas registradas? Sugerencia: usar `LEFT JOIN`.
 
 ```sql
-SELECT * 
-FROM reservation 
-WHERE status IN ('pendiente', 'confirmada');
+SELECT 
+room.room_id, 
+room."name" AS habitacion, 
+property."name" AS inmueble, 
+review.review_id AS id_resena, 
+review.review_text AS resena 
+FROM room 
+JOIN property ON room.property_id = property.property_id 
+LEFT JOIN review ON property.property_id = review.property_id 
+WHERE review.review_id IS NULL;
 ```
 
 **Resultado:**
 
-<
+<img width="847" height="145" alt="53roomsWithoutReviews" src="https://github.com/user-attachments/assets/69610c00-58d8-4a39-99c4-05ab5d0cd540" />
 
 54. ¿Qué habitaciones tienen servicios asignados?
 
