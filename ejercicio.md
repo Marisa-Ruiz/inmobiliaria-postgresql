@@ -991,14 +991,12 @@ SELECT COUNT(*) AS total_anfitriones FROM "owner";
 57. ¿Cuántos huéspedes hay registrados?
 
 ```sql
-SELECT * 
-FROM reservation 
-WHERE status IN ('pendiente', 'confirmada');
+SELECT COUNT(*) AS total_huespedes FROM client;
 ```
 
 **Resultado:**
 
-<
+<img width="242" height="187" alt="57countClients" src="https://github.com/user-attachments/assets/d2673987-0491-41c8-a69e-8e70f2751be8" />
 
 58. ¿Cuántas habitaciones hay publicadas?
 
