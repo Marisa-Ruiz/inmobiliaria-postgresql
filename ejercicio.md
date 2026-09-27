@@ -1095,12 +1095,18 @@ GROUP BY "owner".owner_id, "owner"."name", "owner".surname;
 66. ¿Cuántas reservas tiene cada huésped?
 
 ```sql
-X
+SELECT 
+client.client_id, 
+CONCAT(client."name", ' ', client.surname) AS huesped, 
+COUNT(reservation.reservation_id) AS total_reservas 
+FROM client 
+LEFT JOIN reservation ON client.client_id = reservation.client_id 
+GROUP BY client.client_id, client."name", client.surname;
 ```
 
 **Resultado:**
 
-<
+<img width="447" height="282" alt="66reservationsPerClient" src="https://github.com/user-attachments/assets/bbe96957-e316-454d-ac68-abc5aa06352d" />
 
 67. ¿Cuántas reservas tiene cada habitación?
 
