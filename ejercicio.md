@@ -753,7 +753,17 @@ JOIN client ON reservation.client_id = client.client_id;
 44. Mostrar los servicios asignados a cada habitación.
 
 ```sql
-SELECT room.room\_id, room."name" AS habitacion, facilities.bathroom AS baño\_privado, facilities.air\_conditioning AS aire\_acondicionado, facilities.heating AS calefaccion, facilities.terrace AS terraza, facilities.lighting AS iluminacion, facilities.orientation AS orientacion FROM room JOIN facilities ON room.room\_id = facilities.room\_id;
+SELECT
+room.room_id,
+room."name" AS habitacion,
+facilities.bathroom AS baño_privado,
+facilities.air_conditioning AS aire_acondicionado,
+facilities.heating AS calefaccion,
+facilities.terrace AS terraza,
+facilities.lighting AS iluminacion,
+facilities.orientation AS orientacion
+FROM room
+JOIN facilities ON room.room_id = facilities.room_id;
 ```
 
 **Resultado:**
@@ -763,7 +773,15 @@ SELECT room.room\_id, room."name" AS habitacion, facilities.bathroom AS baño\_p
 45. Mostrar habitación, servicio, costo_adicional y disponibilidad.
 
 ```sql
-SELECT room."name" AS habitacion, facilities.air\_conditioning AS aire\_acondicionado, facilities.heating AS calefaccion, facilities.terrace AS terraza, room.price AS costo\_precio, room.status AS disponibilidad FROM room LEFT JOIN facilities ON room.room\_id = facilities.room\_id;
+SELECT
+room."name" AS habitacion,
+facilities.air_conditioning AS aire_acondicionado,
+facilities.heating AS calefaccion,
+facilities.terrace AS terraza,
+room.price AS costo_precio,
+room.status AS disponibilidad
+FROM room
+LEFT JOIN facilities ON room.room_id = facilities.room_id;
 ```
 
 **Resultado:**
@@ -773,12 +791,18 @@ SELECT room."name" AS habitacion, facilities.air\_conditioning AS aire\_acondici
 46. Mostrar todas las habitaciones con su anfitrión y sus reseñas.
 
 ```sql
-SELECT * FROM reservation WHERE status = 'confirmada';
-```
+SELECT
+room."name" AS habitacion,
+CONCAT("owner"."name", ' ',"owner".surname) AS anfitrion,
+review.review_text AS resena,
+review.punctuation AS puntuacion
+FROM room JOIN property ON room.property_id = property.property_id
+JOIN "owner" ON property.owner_id = "owner".owner_id
+LEFT JOIN review ON property.property\_id = review.property\_id;```
 
 **Resultado:**
 
-<
+<img width="966" height="281" alt="46roomsOwnerAndReviews" src="https://github.com/user-attachments/assets/014886b6-9903-466d-bf98-87870c7ea976" />
 
 47. Mostrar todas las reservas con huésped, anfitrión y habitación.
 
