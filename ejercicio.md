@@ -961,7 +961,20 @@ JOIN facilities ON room.room_id = facilities.room_id;
 
 55. ¿Qué habitaciones no tienen servicios asignados?
 
+```sql
+SELECT 
+room.room_id, 
+room."name" AS habitacion, 
+property."name" AS inmueble 
+FROM room 
+JOIN property ON room.property_id = property.property_id 
+LEFT JOIN facilities ON room.room_id = facilities.room_id 
+WHERE facilities.room_id IS NULL;
+```
 
+**Resultado:**
+
+<img width="557" height="252" alt="55roomsWithoutFacilitiesAssigned" src="https://github.com/user-attachments/assets/ae871a48-f030-4caf-812a-6c458635bd7c" />
 
 Parte 11. Funciones de agregación
 
