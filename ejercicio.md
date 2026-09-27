@@ -1127,12 +1127,18 @@ GROUP BY room.room_id, room."name";
 68. ¿Cuántos servicios tiene asignados cada habitación?
 
 ```sql
-X
+SELECT 
+room.room_id, 
+room."name" AS habitacion, 
+COUNT(facilities.room_id) AS total_servicios 
+FROM room 
+LEFT JOIN facilities ON room.room_id = facilities.room_id 
+GROUP BY room.room_id, room."name";
 ```
 
 **Resultado:**
 
-<
+<img width="517" height="287" alt="68facilitiesPerRoom" src="https://github.com/user-attachments/assets/23fd7166-47f1-46bb-8229-7abe2db8501b" />
 
 69. ¿Cuál es el precio promedio por noche por ciudad?
 
