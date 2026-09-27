@@ -890,14 +890,21 @@ WHERE room."name" = 'Habitación Norte';
 51. ¿Qué huésped reservó la habitación `Suite Norte`?
 
 ```sql
-SELECT * 
+SELECT 
+reservation.reservation_id, 
+CONCAT(client."name", ' ', client.surname) AS huesped, 
+room."name" AS habitacion, 
+reservation.start_date AS fecha_check_in, 
+reservation.status AS estado 
 FROM reservation 
-WHERE status IN ('pendiente', 'confirmada');
+JOIN client ON reservation.client_id = client.client_id 
+JOIN room ON reservation.room_id = room.room_id 
+WHERE room."name" = 'Habitación Norte';
 ```
 
 **Resultado:**
 
-<
+<img width="817" height="178" alt="51clientReservedSuiteNorte" src="https://github.com/user-attachments/assets/fe70ec4c-989b-4113-af81-ee101c881b14" />
 
 52. ¿Qué habitaciones tienen al menos una reseña registrada?
 
