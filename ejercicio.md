@@ -946,14 +946,18 @@ WHERE review.review_id IS NULL;
 54. ¿Qué habitaciones tienen servicios asignados?
 
 ```sql
-SELECT * 
-FROM reservation 
-WHERE status IN ('pendiente', 'confirmada');
+SELECT DISTINCT 
+room.room_id, 
+room."name" AS habitacion, 
+property."name" AS inmueble 
+FROM room 
+JOIN property ON room.property_id = property.property_id 
+JOIN facilities ON room.room_id = facilities.room_id;
 ```
 
 **Resultado:**
 
-<
+<img width="556" height="187" alt="54roomsWithFacilitiesAssigned" src="https://github.com/user-attachments/assets/c61b385e-d173-4a8e-b639-2a20595f1fc5" />
 
 55. ¿Qué habitaciones no tienen servicios asignados?
 
