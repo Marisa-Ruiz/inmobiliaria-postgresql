@@ -721,7 +721,7 @@ CONCAT(client."name", ' ',
 client.surname) AS huesped, 
 room."name" AS habitacion, 
 reservation.start_date AS fecha_check_in, 
-reservation.end\_date AS fecha_check_out, 
+reservation.end_date AS fecha_check_out, 
 reservation.status AS estado 
 FROM reservation 
 JOIN client ON reservation.client_id = client.client_id 
@@ -798,7 +798,7 @@ review.review_text AS resena,
 review.punctuation AS puntuacion
 FROM room JOIN property ON room.property_id = property.property_id
 JOIN "owner" ON property.owner_id = "owner".owner_id
-LEFT JOIN review ON property.property\_id = review.property\_id;
+LEFT JOIN review ON property.property_id = review.property_id;
 ```
 
 **Resultado:**
@@ -850,14 +850,22 @@ WHERE "owner"."name" = 'Carlos' AND "owner".surname = 'Ramírez';
 49. ¿Qué reservas tiene el huésped `Paula Ríos`?
 
 ```sql
-SELECT * 
+SELECT 
+reservation.reservation_id, 
+CONCAT(client."name", ' ', client.surname) AS huesped, 
+room."name" AS habitacion, 
+reservation.start_date AS fecha_check_in, 
+reservation.end_date AS fecha_check_out,
+reservation.status AS estado 
 FROM reservation 
-WHERE status IN ('pendiente', 'confirmada');
+JOIN client ON reservation.client_id = client.client_id 
+LEFT JOIN room ON reservation.room_id = room.room_id 
+WHERE client."name" = 'Paula' AND client.surname = 'Ríos';
 ```
 
 **Resultado:**
 
-<
+<img width="965" height="225" alt="49reservationsByClientPaulaRios" src="https://github.com/user-attachments/assets/32d295fa-1ba6-47de-962e-cead424e859c" />
 
 50. ¿Qué servicios tiene asignados la habitación `Loft Central`?
 
