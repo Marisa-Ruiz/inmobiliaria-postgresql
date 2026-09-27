@@ -981,18 +981,14 @@ Parte 11. Funciones de agregación
 56. ¿Cuántos anfitriones hay registrados?
 
 ```sql
-SELECT * 
-FROM reservation 
-WHERE status IN ('pendiente', 'confirmada');
+SELECT COUNT(*) AS total_anfitriones FROM "owner";
 ```
 
 **Resultado:**
 
-<
+<img width="241" height="195" alt="56countOwners" src="https://github.com/user-attachments/assets/a61ee81a-43f6-47a6-b485-957c4d4673ee" />
 
 57. ¿Cuántos huéspedes hay registrados?
-
-
 
 ```sql
 SELECT * 
