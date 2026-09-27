@@ -909,14 +909,20 @@ WHERE room."name" = 'Habitación Norte';
 52. ¿Qué habitaciones tienen al menos una reseña registrada?
 
 ```sql
-SELECT * 
-FROM reservation 
-WHERE status IN ('pendiente', 'confirmada');
+SELECT DISTINCT 
+room.room_id, 
+room."name" AS habitacion, 
+property."name" AS inmueble, 
+review.punctuation AS puntuacion, 
+review.review_text AS resena 
+FROM room 
+JOIN property ON room.property_id = property.property_id 
+JOIN review ON property.property_id = review.property_id;
 ```
 
 **Resultado:**
 
-<
+<img width="1087" height="372" alt="52roomsWithReviews" src="https://github.com/user-attachments/assets/d9b0bfc0-3b00-4dd4-929d-ce643fd3b9c2" />
 
 53. ¿Qué habitaciones no tienen reseñas registradas? Sugerencia: usar `LEFT JOIN`.
 
