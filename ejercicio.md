@@ -1010,17 +1010,13 @@ SELECT COUNT(*) AS total_habitaciones FROM room;
 
 59. ¿Cuántas reservas hay registradas?
 
-
-
 ```sql
-SELECT * 
-FROM reservation 
-WHERE status IN ('pendiente', 'confirmada');
+SELECT COUNT(*) AS total_reservas FROM reservation;
 ```
 
 **Resultado:**
 
-<
+<img width="232" height="196" alt="59countReservations" src="https://github.com/user-attachments/assets/846a1cc6-02fe-4f31-8760-be64b0fce261" />
 
 60. ¿Cuál es el precio promedio por noche de las habitaciones?
 
