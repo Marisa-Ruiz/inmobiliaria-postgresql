@@ -1051,14 +1051,12 @@ SELECT MIN(price) AS habitacion_mas_economica FROM room;
 63. ¿Cuál es la suma total de ingresos registrados en pagos?
 
 ```sql
-SELECT * 
-FROM reservation 
-WHERE status IN ('pendiente', 'confirmada');
+SELECT SUM(amount) AS total_ingresos FROM payment;
 ```
 
 **Resultado:**
 
-<
+<img width="217" height="183" alt="63sumTotalPayments" src="https://github.com/user-attachments/assets/9171bd9e-bc54-4706-95ac-c4e38461567e" />
 
 Parte 12. GROUP BY
 64. ¿Cuántas habitaciones hay por tipo?
