@@ -1143,12 +1143,18 @@ GROUP BY room.room_id, room."name";
 69. ¿Cuál es el precio promedio por noche por ciudad?
 
 ```sql
-X
+SELECT 
+city.neihborhood AS ciudad, 
+ROUND(AVG(room.price), 2) AS precio_promedio 
+FROM room 
+JOIN property ON room.property_id = property.property_id 
+JOIN city ON property.city_id = city.city_id 
+GROUP BY city.neihborhood;
 ```
 
 **Resultado:**
 
-<
+<img width="418" height="190" alt="69avgRoomPriceByCity" src="https://github.com/user-attachments/assets/bb4dea52-f55a-4c42-8216-0e67a1cec0fb" />
 
 Parte 13. GROUP BY + HAVING
 
