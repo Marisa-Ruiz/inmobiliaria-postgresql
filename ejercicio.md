@@ -1111,12 +1111,18 @@ GROUP BY client.client_id, client."name", client.surname;
 67. ¿Cuántas reservas tiene cada habitación?
 
 ```sql
-X
+SELECT 
+room.room_id, 
+room."name" AS habitacion, 
+COUNT(reservation.reservation_id) AS total_reservas 
+FROM room 
+LEFT JOIN reservation ON room.room_id = reservation.room_id 
+GROUP BY room.room_id, room."name";
 ```
 
 **Resultado:**
 
-<
+<img width="527" height="285" alt="67reservationsPerRoom" src="https://github.com/user-attachments/assets/f6397ba4-b9ab-4b63-8ad1-78d110631047" />
 
 68. ¿Cuántos servicios tiene asignados cada habitación?
 
