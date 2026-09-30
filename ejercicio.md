@@ -1361,39 +1361,3 @@ HAVING COUNT(facilities.facilities_id) > 1;
 
 __________________________________________________________________________________
 
-NIVEL IV NO OBLIGATORIO
-
-Parte 14. Subconsultas
-74. Mostrar las habitaciones cuyo precio por noche sea mayor al promedio de precios.
-75. Mostrar los pagos cuyo monto sea mayor al monto promedio.
-76. Mostrar las habitaciones que tienen reservas registradas.
-77. Mostrar las habitaciones que no tienen reservas registradas.
-78. Mostrar los anfitriones que tienen al menos una habitación.
-79. Mostrar los huéspedes que tienen reservas confirmadas.
-80. Mostrar el nombre de la habitación o habitaciones que tengan más reservas.
-81. Mostrar la habitación más costosa por noche usando una subconsulta.
-
-Parte 15. LEFT JOIN y análisis de datos faltantes
-82. Mostrar los anfitriones que no tengan habitaciones registradas.
-83. Mostrar las habitaciones que no tengan reservas.
-84. Mostrar las habitaciones que no tengan servicios.
-85. Mostrar los huéspedes que no tengan reservas asignadas.
-86. Mostrar las habitaciones que no tengan reseñas.
-
-Parte 16. Consultas de reto
-87. Mostrar un listado completo con habitación, tipo, anfitrión, huésped de la reserva y servicio asignado.
-88. Mostrar cuántas habitaciones hay por tipo, pero solo los tipos con `2` o más habitaciones.
-89. Mostrar el anfitrión con mayor número de habitaciones.
-90. Mostrar la habitación con mayor número de reservas.
-91. Mostrar los huéspedes ordenados por cantidad de reservas, de mayor a menor.
-92. Mostrar las habitaciones que tienen tanto reservas como servicios.
-93. Mostrar las habitaciones que tienen reservas pero no servicios.
-94. Mostrar los servicios que nunca han sido asignados.
-95. Mostrar el ingreso total por habitación (sumando pagos de sus reservas).
-96. Mostrar la habitación con la reserva de mayor valor pagado.
-
-Parte 17. Preguntas de análisis
-97. ¿Cómo identificarías si una relación `1:1` entre `reservas` y `pagos` está bien implementada?
-98. ¿Qué consulta usarías para demostrar que la relación entre `habitaciones` y `servicios` es muchos a muchos?
-99. ¿Qué diferencia hay entre usar `JOIN` y `LEFT JOIN`?
-100. ¿Cuándo usarías una subconsulta en lugar de un `JOIN`?
